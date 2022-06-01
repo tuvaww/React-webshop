@@ -8,8 +8,8 @@ export const HomeImages = () => {
       <div className="imgPlacerDesktop">
         <article className="firstHomeImg">
           <article className="secondHomeImg"></article>
+          <article className="thirdHomeImg"></article>
         </article>
-        <article className="thirdHomeImg"></article>
       </div>
     </section>
   );

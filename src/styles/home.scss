@@ -2,10 +2,13 @@
 .homeImagesContainer {
   width: 100%;
   height: 70vh;
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include tablet {
+    height: 90vh;
+  }
 
   .imgPlacerMobile {
     width: 90%;
@@ -32,31 +35,64 @@
   }
 
   .imgPlacerDesktop {
-    border: 1px solid blue;
     width: 90%;
     height: 100%;
     display: none;
 
     @include tablet {
       display: block;
+      display: flex;
+      justify-content: center;
     }
 
     .firstHomeImg {
-      width: 300px;
-      height: 100%;
-      background-image: url(".././assets/dashl-beauty-bar-karlaplan-1583228385207.png");
-      background-repeat: no-repeat;
-      background-position: center;
+      @include tablet {
+        width: 400px;
+        height: 500px;
+        background-image: url(".././assets/dashl-beauty-bar-karlaplan-1583228385207.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        border-top-left-radius: 60%;
+        border-top-right-radius: 60%;
+        border-bottom-left-radius: 60%;
+        border-bottom-right-radius: 60%;
+      }
 
       .secondHomeImg {
-        border: 1px solid green;
-        width: 200px;
-        height: 200px;
-      }
-    }
+        @include tablet {
+          display: block;
+          width: 300px;
+          height: 400px;
+          position: absolute;
+          right: 65%;
+          top: 300px;
+          border-top-left-radius: 60%;
+          border-top-right-radius: 60%;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
 
-    .thirdHomeImg {
-      border: 1px solid palevioletred;
+          background-image: url(".././assets/11.jpeg");
+          background-repeat: no-repeat;
+          background-position: 50% 30%;
+        }
+      }
+
+      .thirdHomeImg {
+        @include tablet {
+          display: block;
+          width: 300px;
+          height: 400px;
+          background-image: url(".././assets/17.jpeg");
+          background-position: 50% 30%;
+          border-top-left-radius: 60%;
+          border-top-right-radius: 60%;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+          position: absolute;
+          left: 65%;
+          top: 300px;
+        }
+      }
     }
   }
 }

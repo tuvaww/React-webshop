@@ -16,6 +16,12 @@
   }
 }
 
+@mixin tablet-step1 {
+  @media (min-width: 744px) {
+    @content;
+  }
+}
+
 @mixin tablet-up {
   @media (min-width: 900px) {
     @content;
