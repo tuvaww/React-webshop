@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap");
+@import "./mixins/mixins";
+@import "./mixins/variables";
+
+.header-container {
+  width: 100%;
+  height: 100px;
+  background-color: $blue;
+
+  .logo-name-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 60px;
+    width: 100%;
+
+    .logo-name {
+      margin: 0;
+      font-size: 24pt;
+      font-weight: 400;
+      font-family: "Libre Caslon Display", serif;
+    }
+  }
+
+  .linksContainer {
+    .mobile-links-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding-right: 10px;
+      padding-top: 10px;
+      gap: 3px;
+      @include tablet {
+        display: none;
+      }
+      .hamburger {
+        background-color: $darkGreen;
+        width: 37px;
+        height: 4px;
+      }
+    }
+
+    .desktop-links-container {
+      display: none;
+
+      @include tablet {
+        font-family: "Rajdhani", sans-serif;
+        font-size: 16pt;
+        display: block;
+        display: flex;
+        gap: 15px;
+        justify-content: flex-end;
+        padding-right: 10px;
+        padding-top: 10px;
+      }
+
+      .desktop-links {
+        text-decoration: none;
+        color: black;
+        @include tablet-up {
+          font-size: 17pt;
+        }
+      }
+    }
+  }
+}

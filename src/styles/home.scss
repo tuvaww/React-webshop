@@ -1,0 +1,62 @@
+@import "./mixins/mixins";
+.homeImagesContainer {
+  width: 100%;
+  height: 70vh;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .imgPlacerMobile {
+    width: 90%;
+    height: 100%;
+
+    @include phone-to-tablet {
+      width: 70%;
+    }
+    @include tablet {
+      display: none;
+    }
+
+    .mobileHomeImage {
+      width: 100%;
+      height: 100%;
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
+      border-bottom-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+      background-image: url(".././assets/dashl-beauty-bar-karlaplan-1583228385207.png");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .imgPlacerDesktop {
+    border: 1px solid blue;
+    width: 90%;
+    height: 100%;
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+
+    .firstHomeImg {
+      width: 300px;
+      height: 100%;
+      background-image: url(".././assets/dashl-beauty-bar-karlaplan-1583228385207.png");
+      background-repeat: no-repeat;
+      background-position: center;
+
+      .secondHomeImg {
+        border: 1px solid green;
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    .thirdHomeImg {
+      border: 1px solid palevioletred;
+    }
+  }
+}
