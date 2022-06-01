@@ -1,28 +1,25 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { IProducts } from "../models/IAPI";
 
-interface IProducts {
-  image_link: string;
-  brand: string;
-  description: string;
-  id: number;
-  name: string;
-  product_type: string;
-  price: string;
+interface IApiHandlerProps {
+  getProducts(p: IProducts[]): void;
 }
 
-//https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline
-export const ApiHandler = () => {
+export const ApiHandler = (props: IApiHandlerProps) => {
   const [products, setProducts] = useState<IProducts[]>([]);
 
-  /*  useEffect(() => {
+  useEffect(() => {
     axios
       .get("https://makeup-api.herokuapp.com/api/v1/products.json?brand=nyx")
       .then((response) => {
-        console.log(response.data);
+        //console.log(response.data);
         setProducts(response.data);
+        props.getProducts(response.data);
       });
-  }, []); */
+  }, []);
+
+  const getProductsForHomeAdds = () => {};
 
   /*   let productsHTML = products.map((product) => {
     return (
@@ -36,5 +33,5 @@ export const ApiHandler = () => {
     );
   }); */
 
-  return <div></div>;
+  return <></>;
 };

@@ -1,19 +1,11 @@
-interface IIsMobileState {
-  setIsMobile(w: boolean): void;
-}
+import axios from "axios";
+import { IProducts } from "../models/IAPI";
 
-export const ifViewportWidth = (state: boolean) => {
-  let viewportWidth = window.innerWidth;
-
-  console.log(viewportWidth);
-
-  if (viewportWidth <= 600) {
-    state = true;
-    console.log("state bör vara true", state);
-    return state;
-  } else {
-    state = false;
-    console.log("state bör vara false", state);
-    return state;
-  }
+export const getApi = () => {
+  axios
+    .get("https://makeup-api.herokuapp.com/api/v1/products.json?brand=nyx")
+    .then((response) => {
+      //console.log(response.data);
+      return response.data;
+    });
 };
