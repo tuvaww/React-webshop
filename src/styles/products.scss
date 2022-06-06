@@ -1,0 +1,30 @@
+@import "./mixins/mixins";
+@import "./mixins/variables";
+
+.productsContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100vw;
+
+  .productWrapper {
+    display: flex;
+    flex-direction: column;
+
+    .productImgContainer {
+      img {
+        width: 230px;
+      }
+    }
+
+    .fastInfoContainer {
+      .fastToCartButton {
+        height: 27px;
+        border-radius: 5px;
+        background-color: rgba($blue, 0.3);
+        border: 1px solid $darkGreen;
+      }
+    }
+  }
+}

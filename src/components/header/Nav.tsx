@@ -15,7 +15,6 @@ export const Nav = () => {
     setOpenMenu(clicked);
   };
 
-  console.log("openmenu", openMenu);
   return (
     <>
       {openMenu ? <MenuModal changedRoute={closeModalOnRouteChange} /> : <></>}

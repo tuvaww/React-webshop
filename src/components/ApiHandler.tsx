@@ -19,17 +19,5 @@ export const ApiHandler = (props: IApiHandlerProps) => {
       });
   }, []);
 
-  /*   let productsHTML = products.map((product) => {
-    return (
-      <article key={product.id}>
-        <div className="product-img-container">
-          <img src={product.image_link} alt={product.name} />
-        </div>
-        <p>{product.name}</p>
-        <p>{product.price}</p>
-      </article>
-    );
-  }); */
-
   return <></>;
 };
