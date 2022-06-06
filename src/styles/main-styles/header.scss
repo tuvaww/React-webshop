@@ -1,3 +1,4 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
 @import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap");
 @import "../mixins/mixins";
@@ -20,17 +21,30 @@
       font-size: 24pt;
       font-weight: 400;
       font-family: "Libre Caslon Display", serif;
+
+      @include desktop {
+        font-size: 30pt;
+      }
     }
   }
 
   .linksContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
     .mobile-links-container {
+      width: 40px;
       display: flex;
       flex-direction: column;
-      align-items: flex-end;
       padding-right: 10px;
       padding-top: 10px;
       gap: 3px;
+
+      .bi-x {
+        display: none;
+      }
+
       @include tablet {
         display: none;
       }
@@ -39,6 +53,43 @@
         width: 37px;
         height: 4px;
       }
+    }
+
+    .fixed {
+      z-index: 200;
+      position: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+
+      .bi-x {
+        display: block;
+        font-size: 30pt;
+        color: $darkGreen;
+      }
+
+      .hamburger {
+        display: none;
+      }
+
+      /*   .topBurger {
+        width: 28px;
+        height: 4px;
+        border-radius: 5px;
+        transform: rotate(50deg) translate(5px, 5px);
+      }
+      .middleBurger {
+        opacity: 0;
+        // background-color: rgba(0, 0, 0, 0);
+      }
+      .bottomBurger {
+        border-radius: 5px;
+
+        width: 28px;
+        height: 4px;
+        transform: rotate(-55deg) translate(6px, -5px);
+      } */
     }
 
     .desktop-links-container {
@@ -55,11 +106,18 @@
         padding-top: 10px;
       }
 
+      @include desktop {
+        padding-top: 5px;
+      }
+
       .desktop-links {
         text-decoration: none;
         color: black;
         @include tablet-up {
           font-size: 17pt;
+        }
+        @include desktop {
+          font-size: 20pt;
         }
       }
     }

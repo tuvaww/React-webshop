@@ -1,6 +1,6 @@
 @import "./mixins/mixins";
 @import "./mixins/variables";
-
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
 body {
   background-color: rgba($blue, 0.3);
 }
@@ -30,6 +30,8 @@ body {
     .mobileHomeImage {
       width: 100%;
       height: 100%;
+      margin-top: 30px;
+
       border-top-left-radius: 50%;
       border-top-right-radius: 50%;
       border-bottom-left-radius: 50%;
@@ -49,6 +51,7 @@ body {
       display: block;
       display: flex;
       justify-content: center;
+      margin-top: 60px;
     }
 
     .firstHomeImg {
@@ -62,6 +65,15 @@ body {
         border-top-right-radius: 60%;
         border-bottom-left-radius: 60%;
         border-bottom-right-radius: 60%;
+      }
+
+      @include desktop {
+        width: 450px;
+        height: 530px;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
       }
 
       .secondHomeImg {
@@ -81,6 +93,12 @@ body {
           background-repeat: no-repeat;
           background-position: 50% 30%;
         }
+
+        @include desktop {
+          width: 350px;
+          height: 450px;
+          right: 62%;
+        }
       }
 
       .thirdHomeImg {
@@ -97,6 +115,11 @@ body {
           position: absolute;
           left: 65%;
           top: 300px;
+        }
+        @include desktop {
+          width: 350px;
+          height: 450px;
+          left: 62%;
         }
       }
     }
@@ -119,12 +142,45 @@ body {
       width: 200px;
       height: 200px;
       border-radius: 50%;
+
       img {
+        cursor: pointer;
         border-radius: 50%;
 
         width: 100%;
         height: 100%;
       }
+    }
+
+    @include desktop {
+      margin-top: 40px;
+    }
+  }
+}
+
+.homeDescriptionContainer {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+
+  .homeDescription {
+    background-color: $green;
+    padding: 30px;
+    width: 70%;
+    border-radius: 50px;
+    font-family: "Cormorant Garamond", serif;
+    line-height: 20px;
+    @include tablet-up {
+      width: 60%;
+    }
+
+    @include desktop {
+      width: 50%;
+    }
+
+    @include desktop-up {
+      width: 40%;
     }
   }
 }

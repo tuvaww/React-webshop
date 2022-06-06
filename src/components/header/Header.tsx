@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import "../../styles/main-styles/header.scss";
 import { ApiHandler } from "../ApiHandler";
 import { Nav } from "./Nav";
 

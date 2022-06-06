@@ -19,8 +19,6 @@ export const ApiHandler = (props: IApiHandlerProps) => {
       });
   }, []);
 
-  const getProductsForHomeAdds = () => {};
-
   /*   let productsHTML = products.map((product) => {
     return (
       <article key={product.id}>

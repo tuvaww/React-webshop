@@ -1,0 +1,30 @@
+@import "../mixins/variables";
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap");
+
+.menuModalContainer {
+  width: 100vw;
+  height: 40vh;
+  background-color: $blue;
+  z-index: 100;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+
+  .linksWrapper {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .modalLinks {
+      text-decoration: none;
+      color: $darkGreen;
+      font-family: "Rajdhani", sans-serif;
+      font-size: 20pt;
+
+      &:hover {
+        text-decoration: 1.5px underline;
+      }
+    }
+  }
+}

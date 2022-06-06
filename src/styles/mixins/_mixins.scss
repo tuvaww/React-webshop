@@ -29,7 +29,13 @@
 }
 
 @mixin desktop {
-  @media (min-width: 1160px) {
+  @media (min-width: 1100px) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: 1400px) {
     @content;
   }
 }
